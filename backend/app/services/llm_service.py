@@ -52,6 +52,11 @@ def _is_retryable(exc: Exception) -> bool:
         return True
     if isinstance(exc, AuthenticationError):
         return True  # bad key → try next
+    # Check for timeout errors
+    if isinstance(exc, (litellm.Timeout, TimeoutError)):
+        return True
+    if "timeout" in str(exc).lower():
+        return True
     # Check status_code attribute if present
     status = getattr(exc, "status_code", None)
     if status and int(status) in RETRYABLE_STATUS_CODES:
