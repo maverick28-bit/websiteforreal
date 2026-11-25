@@ -6,14 +6,13 @@ A production-quality full-stack AI chatbot with automatic API key failover, Lite
 
 ## 1. Live URLs
 
-> **Note:** Deployment requires manual steps (see §Deployment Instructions). After completing them, update this section with live URLs.
-
 | Service  | URL                             |
 |----------|---------------------------------|
-| Frontend | _Deploy to Vercel/Netlify_      |
-| Backend  | _Deploy to Render/Railway_      |
-| API Docs | `{BACKEND_URL}/docs`            |
-| Health   | `{BACKEND_URL}/health`          |
+| GitHub   | https://github.com/maverick28-bit/websiteforreal |
+| Frontend | _Pending Vercel/Netlify deployment_ |
+| Backend  | _Pending Render deployment_     |
+| API Docs | `{BACKEND_URL}/docs` (Local: `http://localhost:8000/docs`) |
+| Health   | `{BACKEND_URL}/health` (Local: `http://localhost:8000/health`) |
 
 ---
 
@@ -24,8 +23,8 @@ A production-quality full-stack AI chatbot with automatic API key failover, Lite
 **Prerequisites:** Docker Desktop running, Git
 
 ```bash
-git clone <repo-url>
-cd <project-dir>
+git clone https://github.com/maverick28-bit/websiteforreal.git
+cd websiteforreal
 
 # Copy and configure environment
 cp .env.example .env
