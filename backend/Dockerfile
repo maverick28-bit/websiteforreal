@@ -22,6 +22,10 @@ COPY --from=builder /install /usr/local
 # Copy application code
 COPY app/ ./app/
 
+# Copy tests and config for in-container testing
+COPY tests/ ./tests/
+COPY pytest.ini .
+
 # Create data directory
 RUN mkdir -p /data
 

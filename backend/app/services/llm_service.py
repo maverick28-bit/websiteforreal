@@ -96,8 +96,12 @@ async def call_llm(
                 messages=messages,
                 api_key=raw_key,
                 caching=True,
+                timeout=25,
             )
         except Exception as exc:
+            import traceback
+            logger = __import__("logging").getLogger(__name__)
+            logger.error("LLM call failed for %s: %s: %s", key_id, type(exc).__name__, exc)
             if _is_retryable(exc):
                 last_error = exc
                 fallback_attempts += 1

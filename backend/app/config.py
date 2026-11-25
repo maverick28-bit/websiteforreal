@@ -19,8 +19,8 @@ class Settings(BaseSettings):
     # Comma-separated API keys: "key1,key2"
     llm_api_keys: str = ""
 
-    # LiteLLM model string, e.g. "gemini/gemini-2.0-flash"
-    llm_model: str = "gemini/gemini-2.0-flash"
+    # LiteLLM model string, e.g. "gemini/gemini-3.5-flash-lite"
+    llm_model: str = "gemini/gemini-3.5-flash-lite"
 
     # SQLite connection string
     database_url: str = "sqlite:////data/app.db"

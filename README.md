@@ -235,7 +235,7 @@ Beyond the mandatory requirements, the following extras were added:
 |-------|-----------|
 | Frontend | React 18, Vite 5, react-markdown |
 | Backend | Python 3.12, FastAPI, Pydantic v2 |
-| AI | LiteLLM, Gemini 2.0 Flash |
+| AI | LiteLLM, Gemini 3.5 Flash Lite |
 | Database | SQLite (via Python stdlib) |
 | Cache | LiteLLM in-memory local cache |
 | Testing | pytest, pytest-asyncio |
@@ -248,7 +248,7 @@ Beyond the mandatory requirements, the following extras were added:
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
 | `LLM_API_KEYS` | ✅ | — | Comma-separated API keys (e.g., Gemini) |
-| `LLM_MODEL` | — | `gemini/gemini-2.0-flash` | LiteLLM model string |
+| `LLM_MODEL` | — | `gemini/gemini-3.5-flash-lite` | LiteLLM model string |
 | `DATABASE_URL` | — | `sqlite:////data/app.db` | SQLite connection URL |
 | `ALLOWED_ORIGINS` | — | `http://localhost:3000` | CORS origins (comma-separated) |
 | `ENABLE_FAILURE_SIMULATION` | — | `true` | Enable `X-Simulate-Failure` header |
@@ -292,7 +292,7 @@ Frontend only:
   "reply": "The capital of France is Paris.",
   "metadata": {
     "resolution_source": "LIVE_INFERENCE",
-    "model": "gemini/gemini-2.0-flash",
+    "model": "gemini/gemini-3.5-flash-lite",
     "latency_ms": 812,
     "input_tokens": 42,
     "output_tokens": 9,
